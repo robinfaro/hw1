@@ -1,0 +1,114 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img{
+    height: 100px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+
+.gallery{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 1px solid blue;
+    margin: 5vw;
+    position: relative;
+}
+
+.avatar{
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    bottom: 15%;
+    right: 15%;
+}
+
+.container:hover{
+    background-color: rgba(0, 0, 255, 0.6);
+    cursor: pointer;
+}
+
+
+.confirm button {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #0044a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    color: #0044a0;
+    text-align: center;
+    line-height: 0.25rem;
+  }
+
+.confirm button:hover {
+    background: #0044a0;
+    box-shadow: 0 0 30px 5px #0044a0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .confirm button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .confirm button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+
+  .selected{
+    background-color: rgba(0, 0, 255, 0.6);
+   
+ }

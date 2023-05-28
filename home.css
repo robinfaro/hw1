@@ -1,0 +1,244 @@
+body{
+    margin: 0px;
+}
+
+html{
+    font-size: 20px;
+}
+
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*margin-left: 40px;
+    margin-right: 40px;*/
+}
+
+#navigation-bar button{
+    height: 30px;
+    border-radius: 20px;
+    background-color: #0B47A9;
+}
+
+nav button a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+nav button:hover{
+    opacity: 0.7;
+}
+
+nav button a:hover{
+    color: #fff;
+}
+
+nav a {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #0B47A9;
+}
+  
+#logo{
+    width: 300px;
+    height: 100px;
+}
+
+
+header{
+    background-image: url(images/sfondo.png);
+    background-size: cover;
+    height: 25rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    z-index: -2;
+    position: relative;
+    color: white;
+    margin-bottom: 50px;
+
+}
+
+#overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+.menu-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+
+.text-icon{
+    display: flex;
+}
+
+
+.menu-element button {
+    font-size: 1rem;
+    /*position: absolute;
+    height: 1rem;
+    top: 5rem;
+    left: 12.5rem;*/
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #0044a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    color: #0044a0;
+    text-align: center;
+    line-height: 0.25rem;
+  }
+
+  
+  #menu button:hover {
+    background: #0044a0;
+    box-shadow: 0 0 30px 5px #0044a0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    color: white;
+  }
+  
+  #menu button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  #menu button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  #menu button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+
+#menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+#menu img{
+    height: 7.5rem;
+    width: 10rem;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+
+
+#menu button a {
+    text-decoration: none;
+    color: #0044a0;
+
+}
+
+
+#menu button:hover a {
+    color:#fff
+}
+
+#mobile-navbar img{
+    width: 30px;
+    height: 30px;
+}
+
+#mobile-navbar button{
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #0B47A9;
+}
+
+#mobile-navbar{
+    display: none;
+}
+
+
+@media (max-width: 800px) {
+    html{
+        font-size: 10px;
+    }
+    #navigation-bar{
+        display: none;
+    }
+
+    #mobile-navbar{
+        display: flex;
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    html{
+        font-size: 7px;
+    }
+
+    
+}
+
+

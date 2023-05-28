@@ -1,0 +1,138 @@
+.hidden {
+    display: none;
+}
+
+#content {
+    width: 40vw;
+    border-radius: 15px;
+}
+
+#search{
+    margin-left: 10px;
+    background-color: #0044a0;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+}
+
+.imgBox{
+    width: 21vw;
+    height: 21vw;
+    padding: 0.5vw;
+    position: relative;
+}
+
+.artwork{
+    width: 100%;
+    height: 100%;
+}
+
+.imgBoxAi {
+    max-width: 42vw;
+    height: 42vw;
+    padding: 1vw;
+    position: relative;
+
+}
+
+.aiImage{
+    width: 100%;
+    height: 100%;
+}
+
+
+header img{
+    height: 100px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.like-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .like-button img {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 40px;
+    height: 45px;
+
+  }
+
+  .like-button{
+    display: none;
+  }
+
+  .imgBox:hover .like-button{
+    display: inline-block;
+  }
+
+
+  .imgBoxAi:hover .like-button{
+    display: inline-block;
+  }
+
+  .title{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+  .imgBox:hover .title{
+    display: inline;
+  }
+
+
+.imageAdder{
+    margin-top: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #0044a0;
+    color: white;
+    cursor: pointer;
+}
+
+.error img {
+  width: 30px;
+}
+
+.error{
+  display: flex;
+  align-items: center;
+}
+
+
+@media(max-width:700px){
+
+    .imgBox{
+        width: 42vw;
+        height: 42vw;
+        padding: 1vw;
+        position: relative;
+    }
+
+}
+
+
+  

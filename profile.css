@@ -1,0 +1,220 @@
+body{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.hidden{
+  display: none;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    height: 100px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.profile-pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    position: relative;
+}
+
+.profile-info .pic{
+    width: 100%;
+}
+
+.modify{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    right: -20px;
+}
+
+.modify img{
+    width: 100%;
+}
+
+.profile-info{
+    display: flex;
+    align-items: center;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+}
+
+.info-container span{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+.liked-paintings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.liked-paintings .showImage {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #0044a0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    color: #0044a0;
+    text-align: center;
+    line-height: 0.25rem;
+  }
+
+.liked-paintings .showImage:hover {
+    background: #0044a0;
+    box-shadow: 0 0 30px 5px #0044a0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .liked-paintings .showImage:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .liked-paintings .showImage::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+
+
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.imgBox{
+    width: 21vw;
+    height: 21vw;
+    padding: 0.5vw;
+    position: relative;
+    margin-top: 10px;
+}
+
+.artwork{
+    width: 100%;
+    height: 100%;
+}
+
+.like-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .like-button img {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 40px;
+    height: 45px;
+
+  }
+
+  .like-button{
+    display: none;
+  }
+
+  .imgBox:hover .like-button{
+    display: inline-block;
+  }
+
+
+  .imgBoxAi:hover .like-button{
+    display: inline-block;
+  }
+
+  .modify{
+    cursor: pointer;
+  }
+
+  .most-liked-paintings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .title{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+  .imgBox:hover .title{
+    display: inline;
+  }
+
+
+
+  @media (max-width: 550px) {
+    html{
+        font-size: 12px;
+    }
+
+    .liked-paintings .showImage{
+      font-size: 0.7rem;
+    }
+  }
+
+@media(max-width:700px){
+
+  .imgBox{
+      width: 42vw;
+      height: 42vw;
+      padding: 1vw;
+      position: relative;
+  }
+
+}
+
+    
