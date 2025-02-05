@@ -1,5 +1,6 @@
 import requests
 import os
+from github import Github
 
 # Recupera il nome del repository e il numero della PR dalle variabili d'ambiente
 repo_name = os.getenv("REPO_NAME")
