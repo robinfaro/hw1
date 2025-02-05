@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, edited]
 
+permissions:
+  pull-requests: write  # Permesso per scrivere nelle PR
+  issues: write         
+
 jobs:
   review:
     runs-on: ubuntu-latest
