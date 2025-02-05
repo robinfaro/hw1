@@ -1,0 +1,26 @@
+name: PR Review with Qwen Model
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Send PR data to model API
+        run: |
+          python send_request.py
+        env:
+          API_URL: "https://b814-151-97-13-187.ngrok-free.app/generate_review/"  # URL pubblico del tuo server FastAPI
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_NAME: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}  # Utilizza il numero della PR che ha attivato l'azione
