@@ -14,7 +14,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests github
+          pip install requests PyGithub
 
       - name: Send PR data to model API
         run: |
