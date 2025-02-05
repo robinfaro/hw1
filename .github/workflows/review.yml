@@ -24,7 +24,7 @@ jobs:
         run: |
           python send_request.py
         env:
-          API_URL: "https://b814-151-97-13-187.ngrok-free.app/generate_review/"  # URL pubblico del tuo server FastAPI
+          API_URL: "https://72ad-151-97-13-187.ngrok-free.app/generate_review/"  # URL pubblico del tuo server FastAPI
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_NAME: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}  # Utilizza il numero della PR che ha attivato l'azione
