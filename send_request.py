@@ -19,11 +19,17 @@ pr_data = {
 response = requests.post(os.getenv("API_URL"), json=pr_data)
 
 # Ottieni la review generata dal modello
-review = response.json().get("review", "No review generated")
+review = "# Review del modello QWEN allenato\n" + response.json().get("review", "No review generated") 
+review_base = "# Review del modello QWEN base\n" + response.json().get("base_review", "No review base")
 
 # Pubblica la review come commento sulla PR
 pr.create_review(
     body=review,
+    event="COMMENT"
+)
+
+pr.create_review(
+    body=review_base,
     event="COMMENT"
 )
 
