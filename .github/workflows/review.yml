@@ -1,8 +1,14 @@
 name: PR Review with Qwen Model
 
+#on:
+#  pull_request:
+#    types: [opened, synchronize, reopened, edited]
+
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, edited]
+  workflow_run:
+    workflows: ["Trigger Review Workflow"]
+    types:
+      - requested
 
 permissions:
   pull-requests: write  # Permesso per scrivere nelle PR
