@@ -6,15 +6,7 @@ on:
 
 jobs:
   trigger:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      
-      - name: Trigger Review Workflow
-        uses: paradigma-spa/pr-reviewer/.github/workflows/generate_review.yml@main
-        with:
-          pr_number: ${{ github.event.pull_request.number }}
-          repository: ${{ github.repository }}
-        env:
-           GH_PAT: ${{ secrets.GH_PAT }}
+      uses: paradigma-spa/pr-reviewer/.github/workflows/generate_review.yml@main
+      with:
+        pr_number: ${{ github.event.pull_request.number }}
+        repository: ${{ github.repository }}
